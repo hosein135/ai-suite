@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verilog AI Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verilog AI Chat</h1>
+    <form method="POST">
+        <label for="user_input">Ask the AI:</label>
+        <textarea id="user_input" name="user_input" rows="4" placeholder="Type your question here..."></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if response_text %}
+    <div>
+        <h3>AI Response:</h3>
+        <pre>{{ response_text }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
